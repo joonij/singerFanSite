@@ -1,0 +1,169 @@
+/*font*/
+@font-face{font-family:"Brush"; src:url("../fonts/Dry Brush.ttf")}
+@font-face{font-family:"ICELAND"; src:url("../fonts/ICELAND PERSONAL USE.ttf")}
+@font-face{font-family:"Maplestory_Bold"; src:url("../fonts/Maplestory Bold.ttf")}
+@font-face{font-family:"Maplestory_Light"; src:url("../fonts/Maplestory Light.ttf")}
+
+
+/*header*/
+header {
+    position: fixed;
+    width: 1000px;
+    height: 75px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 3px dashed #000;
+    border-top: none;
+    border-radius: 0px 0px 50px 50px;
+    text-align: center;
+    background: rgba(0,0,0,0);
+    z-index: 100;
+}
+nav {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+h1 {
+    display: inline-block;
+    width: 30%;
+    height: 100%;
+    padding-top: 15px;
+}
+h1 img {
+    width: auto;
+    height: 50px;
+}
+ul {
+    display: inline-block;
+    width: 70%;
+    height: 100%;
+    float: right;
+}
+li {
+    width: 25%;
+    height: 100%;
+    float: left;
+    padding-top: 20px;
+    
+}
+li a {
+    font-size: 20px;
+    font-family: "Brush";
+    color: #fff;
+}
+
+
+/*container*/
+#container {
+    width: 100%;
+    height: auto;
+}
+
+
+/*home*/
+#home {
+    position:relative;
+    width: 100%;
+    background: url(../img/ocean.jpg);
+    background-size: cover;
+}
+#home_text {
+    width: 100%;
+    height: 1000px;
+}
+#home_text p {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+    border: 3px dashed #000;
+    border-radius: 50px;
+}
+#home_text span {
+    display: block;
+    font-size: 30px;
+    font-family: "Maplestory_Bold"
+}
+#home_text span:nth-child(2) {
+    padding-left: 60px;
+}
+#home_text span:nth-child(3) {
+    padding-left: 120px;
+}
+#home_text span:nth-child(4) {
+    text-align: right;
+}
+#home_video {
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    border-top: 3px dashed #000;
+    border-bottom: 3px dashed #000;
+    background: url(../img/ocean.jpg);
+    background-size: cover;
+}
+#home_video video {
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    border-radius: 50px;
+    transform: translate(-50%, -50%);
+}
+
+/*about*/
+
+#about {
+    position: relative;
+    width: 100%;
+    background: #000;
+}
+.infor {
+    position: relative;
+    width:50%;
+    margin: 0 auto;
+    background: url(../img/ocean.jpg) no-repeat;
+    background-size: cover;
+}
+#shadow_1 {
+    position: relative;
+    width:100%;
+    height: 1000px;
+    background: url(../img/shadow1.png) 50%;
+    background-size: cover;
+    z-index: 2
+}
+#infor_1 img {
+    position:absolute;
+    width: 400px;
+    left: 50%;
+    bottom: 150px;
+    transform: translateX(-50%);
+    z-index: 1
+}
+
+#shadow_2 {
+    position: relative;
+    width:100%;
+    height: 1000px;
+    background: url(../img/shadow2.png) 50%;
+    background-size: cover;
+    z-index: 2
+}
+#infor_2 img {
+    position:absolute;
+    width: 400px;
+    left: 50%;
+    bottom: 150px;
+    transform: translateX(-50%);
+    z-index: 1
+}
+
+
+
+
+

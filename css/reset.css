@@ -1,0 +1,8 @@
+/*RESET CSS*/
+
+* {padding:0px; margin:0px;}
+ul,ol {list-style:none;}
+a {text-decoration:none;}
+img,fieldset,iframe {border:0;}
+img,fieldset,section { border:none; }
+hr {display:none;}

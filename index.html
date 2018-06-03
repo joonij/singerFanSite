@@ -22,16 +22,16 @@
             </h1>
             <ul>
                 <li>
-                    <a href="#">HOME</a>
+                    <a id="nav_home" href="#">HOME</a>
                 </li>
                 <li>
-                    <a href="#">ABOUT</a>
+                    <a id="nav_about" href="#">ABOUT</a>
                 </li>
                 <li>
-                    <a href="#">ALBOM</a>
+                    <a id="nav_albom" href="#">ALBOM</a>
                 </li>
                 <li>
-                    <a href="#">LETER</a>
+                    <a id="nav_letter" href="#">LETTER</a>
                 </li>
             </ul>
         </nav>
@@ -93,7 +93,7 @@
                 </div>
             </div>
         </div>
-        <div id="albom">
+        <div id="albom" class="off">
             <div id="albom_area">
                 <div id="albom_text">
                     <p>
@@ -114,8 +114,8 @@
                 </div>
                 <div id="play_list">
                     <div id="play">
-                        <img src="img/play.png" alt="play">
-                        <img src="img/stop.png" alt="stop">
+                        <img id="play_button" src="img/play.png" alt="play">
+                        <img id="stop_button" src="img/stop.png" alt="stop">
                     </div>
                     <div id="next"></div>
                     <div id="prev"></div>
@@ -137,6 +137,7 @@
                 <p>
                     <textarea name="content" cols="1" rows="1" wrap="hard" placeholder="내용"></textarea>
                 </p>
+                <input type="submit" value="전송">
             </div>
         </div>
     </div>

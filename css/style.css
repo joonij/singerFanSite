@@ -5,6 +5,11 @@
 @font-face{font-family:"Maplestory_Light"; src:url("../fonts/Maplestory Light.ttf")}
 
 
+/* opacity */
+.off {
+    opacity: 0;
+}
+
 /*header*/
 header {
     position: fixed;
@@ -244,6 +249,16 @@ header li a {
     background-size: cover;
     z-index: 2;
 }
+
+.turn {
+    animation-name: play;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+@keyframes play {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
 #next {
     position: absolute;
     width: 200px;
@@ -255,6 +270,7 @@ header li a {
     border-radius: 200px;
     background: url(../img/cd_2.png);
     background-size: cover;
+    cursor: pointer;
     z-index: 1;
 }
 #prev {
@@ -268,6 +284,7 @@ header li a {
     border-radius: 200px;
     background: url(../img/cd_5.png);
     background-size: cover;
+    cursor: pointer;
     z-index: 1;
 }
 #play img {
@@ -275,6 +292,7 @@ header li a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    cursor: pointer;
 }
 
 
@@ -309,12 +327,22 @@ header li a {
     max-height: 25px;
     font-size: 20px;
     color: #fff;
+    border: 3px dashed #000;
     background: rgba(0,0,0,0);
-    border: none;
 }
 #letter_text p:nth-child(4) textarea{
     min-height: 400px;
     max-height: 400px;
+}
+#letter_text input {
+    position: relative;
+    width: 300px;
+    height: 30px;
+    font-size: 20px;
+    font-family: "Maplestory_light";
+    border: 3px dashed #000;
+    background: url(../img/ocean.jpg);
+    background-size: cover;
 }
 
 /*footer*/

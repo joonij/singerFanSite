@@ -27,21 +27,43 @@ $(document).ready(function(){
     $("#play_button").click(Event, function(){
         $(this).fadeOut();
         $("#stop_button").fadeIn();
-        $("#play").addClass("turn");
+        $(".play .play_img").addClass("turn");
     });
     $("#stop_button").click(Event, function(){
         $(this).fadeOut();
         $("#play_button").fadeIn();
-        $("#play").removeClass("turn");
+        $(".play  .play_img").removeClass("turn");
     });
     
+    $(".next").click(Event, function(){
+        $(".play").animate({
+            width: "200px",
+            height: "200px",
+            top: "80%",
+            right: "-15%",
+        }, 3000);
+        $(".play").animate({
+            width: "200px",
+            height: "200px",
+            top: "80%",
+            right: "-15%",
+        }, 3000);
+        $(".play").animate({
+            width: "200px",
+            height: "200px",
+            top: "80%",
+            right: "-15%",
+        }, 3000);
+    });
+    
+    $(".prev").click(Event, function(){
+    });
+
     
     var musicArry = [];
     for(var i = 0; i<=5; i++){
         musicArry[i] = "url(../img/cd_"+i+".png)";
     }
-    
-    musicArry[0]
     
 
 });

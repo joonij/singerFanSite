@@ -1,5 +1,6 @@
 $(document).ready(function(){
     
+//    nav button
     $("#nav_home").click(Event, function(){
         $("html, body").animate({scrollTop : 0}, 3000);
     });
@@ -13,6 +14,7 @@ $(document).ready(function(){
         $("html, body").animate({scrollTop : 5012}, 3000);
     });
     
+//    fixed display
     $(window).on("scroll", function(){
         if ($(window).scrollTop() < 2006) {
             $("#albom").addClass("off");
@@ -23,6 +25,7 @@ $(document).ready(function(){
         }
     });
     
+//    music play
     $("#stop_button").fadeOut();
     $("#play_button").click(Event, function(){
         $(this).fadeOut();
@@ -35,25 +38,13 @@ $(document).ready(function(){
         $(".play  .play_img").removeClass("turn");
     });
     
+//    albom img change
+    $("#cd_list > div").eq(0).addClass("play");
+    $("#cd_list > div").eq(1).addClass("next");
+    $("#cd_list > div").eq(4).addClass("prev");
+    
     $(".next").click(Event, function(){
-        $(".play").animate({
-            width: "200px",
-            height: "200px",
-            top: "80%",
-            right: "-15%",
-        }, 3000);
-        $(".play").animate({
-            width: "200px",
-            height: "200px",
-            top: "80%",
-            right: "-15%",
-        }, 3000);
-        $(".play").animate({
-            width: "200px",
-            height: "200px",
-            top: "80%",
-            right: "-15%",
-        }, 3000);
+        $(".play").attr("class","prev");
     });
     
     $(".prev").click(Event, function(){

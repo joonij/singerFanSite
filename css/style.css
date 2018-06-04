@@ -205,37 +205,6 @@ header li a {
     background-size: cover;
     overflow: hidden;
 }
-#albom_text {
-    position: relative;
-    width: 650px;
-    height:650px;
-    top:50%;
-    transform: translateY(-50%);
-    margin-left: 100px;
-    padding-left: 30px;
-    border: 3px dashed #000;
-    border-radius: 50px;
-}
-#albom_text span {
-    display: block;
-    font-size: 28px;
-    font-family: "Maplestory_Light";
-    letter-spacing: 3px;
-}
-#albom_text span:nth-child(1) {
-    font-size: 40px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    font-family: "Maplestory_Bold";
-}
-#play_area {
-    position: absolute;
-    width:600px;
-    height: 1000px;
-    top: 0;
-    right: 0;
-    overflow: hidden;
-}
 #button {
     position: absolute;
     width: 600px;
@@ -253,63 +222,93 @@ header li a {
     transform: translate(-50%, -50%);
     cursor: pointer;
 }
+#cd_list {
+   position: relative;
+    width:100%;
+    height: 100%; 
+}
 .play {
+    position: relative;
+    width:100%;
+    height: 100%;
+}
+.albom_text {
+    position: relative;
+    display: none;
+    width: 650px;
+    height:650px;
+    top:50%;
+    transform: translateY(-50%);
+    margin-left: 50px;
+    padding-left: 30px;
+    border: 3px dashed #000;
+    border-radius: 50px;
+}
+.albom_text span {
+    display: block;
+    font-size: 28px;
+    font-family: "Maplestory_Light";
+    letter-spacing: 3px;
+}
+.albom_text span:nth-child(1) {
+    font-size: 40px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-family: "Maplestory_Bold";
+}
+.play .albom_text {
+    display: block;
+}
+.play .cd_img {
     position: absolute;
     width: 600px;
     height:600px;
     top:50%;
-    right:-15%;
+    right:0;
     transform: translateY(-50%);
     border: 3px dashed #000;
     border-radius: 600px;
     z-index: 2;
 }
-.next {
+.next .cd_img {
     position: absolute;
     width: 200px;
     height:200px;
     top:20%;
-    right:-15%;
+    right:0;
     transform: translateY(-50%);
     border: 3px dashed #000;
     border-radius: 200px;
-    cursor: pointer;
-    z-index: 1;
+    z-index: 2;
 }
-.prev {
+.prev .cd_img {
     position: absolute;
     width: 200px;
     height:200px;
     top:80%;
-    right:-15%;
+    right:0;
     transform: translateY(-50%);
     border: 3px dashed #000;
     border-radius: 200px;
-    cursor: pointer;
-    z-index: 1;
+    z-index: 2;
 }
-.play_img {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-#cd_1 .play_img {
+#cd_1 .cd_img {
     background: url(../img/cd_1.png);
     background-size: cover;
 }
-#cd_2 .play_img {
+#cd_2 .cd_img {
     background: url(../img/cd_2.png);
     background-size: cover;
 }
-#cd_3 .play_img {
+#cd_3 .cd_img {
     background: url(../img/cd_3.png);
     background-size: cover;
 }
-#cd_4 .play_img {
+#cd_4 .cd_img {
     background: url(../img/cd_4.png);
     background-size: cover;
 }
-#cd_5 .play_img {
+#cd_5 .cd_img {
     background: url(../img/cd_5.png);
     background-size: cover;
 }
@@ -329,10 +328,14 @@ header li a {
 #letter{
     position: relative;
     width: 100%;
-    height: 1000px;
-    background: #000;
     border-top: 3px dashed #000;
     z-index: 20;
+}
+#letter_area {
+    position: relative;
+    width:100%;
+    height: 1000px;
+    background: #000;
 }
 #letter img {
     position: absolute;

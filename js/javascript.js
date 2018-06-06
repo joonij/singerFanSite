@@ -63,12 +63,11 @@ $(document).ready(function(){
 //    albom img change
     $("#cd_list > div").eq(0).addClass("play");
     $("#cd_list > div").eq(1).addClass("next");
-    $("#cd_list > div").eq(4).addClass("prev");
-
+    $("#cd_list > div").eq(4).addClass("prev");  
     $("#next_btn").click(Event, function(){
-            $("#stop_btn").css("display","none");
-            $("#play_btn").css("display","block");
-            $(".play .cd_img").removeClass("turn");
+        $("#stop_btn").css("display","none");
+        $("#play_btn").css("display","block");
+        $(".play .cd_img").removeClass("turn");
         if ($("#cd_list > div").eq(0).hasClass("play")){
             $("#cd_list > div").eq(4).removeClass("prev");
             $("#cd_list > div").eq(0).attr("class", "prev");
@@ -102,9 +101,9 @@ $(document).ready(function(){
         }
     });
     $("#prev_btn").click(Event, function(){
-            $("#stop_btn").css("display","none");
-            $("#play_btn").css("display","block");
-            $(".play .cd_img").removeClass("turn");
+        $("#stop_btn").css("display","none");
+        $("#play_btn").css("display","block");
+        $(".play .cd_img").removeClass("turn");
         if ($("#cd_list > div").eq(0).hasClass("play")){
             $("#cd_list > div").eq(1).removeClass("next");
             $("#cd_list > div").eq(0).attr("class", "next");

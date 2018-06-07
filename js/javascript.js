@@ -63,78 +63,59 @@ $(document).ready(function(){
 //    albom img change
     $("#cd_list > div").eq(0).addClass("play");
     $("#cd_list > div").eq(1).addClass("next");
-    $("#cd_list > div").eq(4).addClass("prev");  
+    $("#cd_list > div").eq(4).addClass("prev");
+    
     $("#next_btn").click(Event, function(){
         $("#stop_btn").css("display","none");
         $("#play_btn").css("display","block");
         $(".play .cd_img").removeClass("turn");
-        if ($("#cd_list > div").eq(0).hasClass("play")){
-            $("#cd_list > div").eq(4).removeClass("prev");
-            $("#cd_list > div").eq(0).attr("class", "prev");
-            $("#cd_list > div").eq(1).attr("class", "play");
-            $("#cd_list > div").eq(2).attr("class", "next");
-            music.pause();
-        } else if ($("#cd_list > div").eq(1).hasClass("play")) {
-            $("#cd_list > div").eq(0).removeClass("prev");
-            $("#cd_list > div").eq(1).attr("class", "prev");
-            $("#cd_list > div").eq(2).attr("class", "play");
-            $("#cd_list > div").eq(3).attr("class", "next");
-            music.pause();
-        } else if ($("#cd_list > div").eq(2).hasClass("play")) {
-            $("#cd_list > div").eq(1).removeClass("prev");
-            $("#cd_list > div").eq(2).attr("class", "prev");
-            $("#cd_list > div").eq(3).attr("class", "play");
-            $("#cd_list > div").eq(4).attr("class", "next");
-            music.pause();
-        } else if ($("#cd_list > div").eq(3).hasClass("play")) {
-            $("#cd_list > div").eq(2).removeClass("prev");
-            $("#cd_list > div").eq(3).attr("class", "prev");
-            $("#cd_list > div").eq(4).attr("class", "play");
-            $("#cd_list > div").eq(0).attr("class", "next");
-            music.pause();
-        } else if ($("#cd_list > div").eq(4).hasClass("play")) {
-            $("#cd_list > div").eq(3).removeClass("prev");
-            $("#cd_list > div").eq(4).attr("class", "prev");
-            $("#cd_list > div").eq(0).attr("class", "play");
-            $("#cd_list > div").eq(1).attr("class", "next");
-            music.pause();
+        audio_list();
+        
+        var tempSelector;
+        $("#cd_list > div").each(function(){
+            $(this).hasClass("play") ? tempSelector = $(this): "";
+        });
+        
+        tempSelector.prev().length > 0 ? tempSelector.prev().removeClass("prev") : $("#cd_list > div").eq(4).removeClass("prev");
+        tempSelector.attr("class", "prev");
+        tempSelector.next().attr("class","play");
+        
+        if(tempSelector.next().next().length > 0){
+            tempSelector.next().next().attr("class","next");
+        } else if(tempSelector.next().length > 0){
+            $("#cd_list > div").eq(0).attr("class","next");
+        } else {
+            $("#cd_list > div").eq(0).attr("class","play");
+            $("#cd_list > div").eq(1).attr("class","next");
         }
+        music.pause();
+        return false;
     });
     $("#prev_btn").click(Event, function(){
         $("#stop_btn").css("display","none");
         $("#play_btn").css("display","block");
         $(".play .cd_img").removeClass("turn");
-        if ($("#cd_list > div").eq(0).hasClass("play")){
-            $("#cd_list > div").eq(1).removeClass("next");
-            $("#cd_list > div").eq(0).attr("class", "next");
-            $("#cd_list > div").eq(4).attr("class", "play");
-            $("#cd_list > div").eq(3).attr("class", "prev");
-            music.pause();
-        } else if ($("#cd_list > div").eq(4).hasClass("play")) {
-            $("#cd_list > div").eq(0).removeClass("next");
-            $("#cd_list > div").eq(4).attr("class", "next");
-            $("#cd_list > div").eq(3).attr("class", "play");
-            $("#cd_list > div").eq(2).attr("class", "prev");
-            music.pause();
-        } else if ($("#cd_list > div").eq(3).hasClass("play")) {
-            $("#cd_list > div").eq(4).removeClass("next");
-            $("#cd_list > div").eq(3).attr("class", "next");
-            $("#cd_list > div").eq(2).attr("class", "play");
-            $("#cd_list > div").eq(1).attr("class", "prev");
-            music.pause();
-        } else if ($("#cd_list > div").eq(2).hasClass("play")) {
-            $("#cd_list > div").eq(3).removeClass("next");
-            $("#cd_list > div").eq(2).attr("class", "next");
-            $("#cd_list > div").eq(1).attr("class", "play");
-            $("#cd_list > div").eq(0).attr("class", "prev");
-            music.pause();
-        } else if ($("#cd_list > div").eq(1).hasClass("play")) {
-            $("#cd_list > div").eq(2).removeClass("next");
-            $("#cd_list > div").eq(1).attr("class", "next");
-            $("#cd_list > div").eq(0).attr("class", "play");
-            $("#cd_list > div").eq(4).attr("class", "prev");
-            music.pause();
+        audio_list();
+        
+        var tempSelector;
+        $("#cd_list > div").each(function(){
+            $(this).hasClass("play") ? tempSelector = $(this): "";
+        });
+        
+        tempSelector.next().length > 0 ? tempSelector.next().removeClass("next") : $("#cd_list > div").eq(0).removeClass("next");
+        tempSelector.attr("class", "next");
+        tempSelector.prev().attr("class", "play");
+        
+        if(tempSelector.prev().prev().length > 0){
+            tempSelector.prev().prev().attr("class", "prev")
+        } else if (tempSelector.prev().length > 0 ){
+            $("#cd_list > div").eq(4).attr("class", "prev")
+        } else {
+            $("#cd_list > div").eq(4).attr("class", "play")
+            $("#cd_list > div").eq(3).attr("class", "prev")
         }
+        music.pause();
+        return false;
     });
     
     

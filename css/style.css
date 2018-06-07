@@ -212,7 +212,6 @@ header li a {
     top:50%;
     right:0;
     transform: translateY(-50%);
-    border: none;
     z-index: 3;
 }
 #start_btn {
@@ -225,16 +224,18 @@ header li a {
 #next_btn {
     position: absolute;
     width: 200px;
-    height:200px;
-    top:10%;
+    height:250px;
+    top:5%;
     right: 0;
+    cursor: pointer;
 }
 #prev_btn {
     position: absolute;
     width: 200px;
-    height:200px;
-    top:70%;
+    height:250px;
+    top:65%;
     right: 0;
+    cursor: pointer;
 }
 #cd_list {
    position: relative;

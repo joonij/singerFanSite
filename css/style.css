@@ -1,6 +1,5 @@
 /*font*/
 @font-face{font-family:"Brush"; src:url("../fonts/Dry Brush.ttf")}
-@font-face{font-family:"ICELAND"; src:url("../fonts/ICELAND PERSONAL USE.ttf")}
 @font-face{font-family:"Maplestory_Bold"; src:url("../fonts/Maplestory Bold.ttf")}
 @font-face{font-family:"Maplestory_Light"; src:url("../fonts/Maplestory Light.ttf")}
 
@@ -52,14 +51,16 @@ header li {
     height: 100%;
     float: left;
     padding-top: 20px;
-    
+    transition:all 1s;
 }
 header li a {
     font-size: 20px;
     font-family: "Brush";
     color: #fff;
 }
-
+header li:hover {
+    transform: scale(1.3);
+}
 
 /*container*/
 #container {

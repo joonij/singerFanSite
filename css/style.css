@@ -1,7 +1,6 @@
 /*font*/
 @font-face{font-family:"Brush"; src:url("../fonts/Dry Brush.ttf")}
-@font-face{font-family:"Maplestory_Bold"; src:url("../fonts/Maplestory Bold.ttf")}
-@font-face{font-family:"Maplestory_Light"; src:url("../fonts/Maplestory Light.ttf")}
+@font-face{font-family:"Maplestory_Light"; src:url("../fonts/Maplestory-Light.woff")}
 
 
 /* opacity */
@@ -92,7 +91,7 @@ header li:hover {
 #home_text span {
     display: block;
     font-size: 40px;
-    font-family: "Maplestory_Bold"
+    font-family: "Maplestory_Light"
 }
 #home_text span:nth-child(2) {
     padding-left: 60px;
@@ -172,7 +171,7 @@ header li:hover {
     color: white;
     font-size: 30px;
     padding-left: 100px;
-    font-family: "Maplestory_Bold";
+    font-family: "Maplestory_Light";
 }
 .about_text p:nth-child(1) {
     padding-top:200px;
@@ -270,7 +269,7 @@ header li:hover {
     font-size: 40px;
     padding-top: 50px;
     padding-bottom: 30px;
-    font-family: "Maplestory_Bold";
+    font-family: "Maplestory_Light";
 }
 .play .albom_text {
     display: block;
@@ -349,7 +348,7 @@ header li:hover {
 #letter_area {
     position: relative;
     width:100%;
-    height: 1000px;
+    height: 1100px;
     background: #000;
 }
 #letter img {

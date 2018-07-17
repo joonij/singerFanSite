@@ -5,7 +5,7 @@
 
 /* opacity */
 .off {
-    opacity: 0;
+    display: none;
 }
 
 /*header*/
@@ -16,7 +16,7 @@ header {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    border: 3px dashed #000;
+    border: 2px dashed #000;
     border-top: none;
     border-radius: 0px 0px 50px 50px;
     text-align: center;
@@ -78,7 +78,7 @@ header li:hover {
 #home_text {
     width: 100%;
     height: 1000px;
-    border-top: 3px dashed #000;
+    border-top: 2px dashed #000;
     z-index: 10;
 }
 #home_text p {
@@ -107,7 +107,7 @@ header li:hover {
     position: relative;
     width: 100%;
     height: 1000px;
-    border-top: 3px dashed #000;
+    border-top: 2px dashed #000;
     background: url(../img/ocean.jpg);
     background-size: cover;
     z-index: 20;
@@ -128,14 +128,14 @@ header li:hover {
     width: 100%;
     background: url(../img/ocean.jpg) no-repeat;
     background-size: cover;
-    border-bottom: 3px dashed #000;
+    border-bottom: 2px dashed #000;
     z-index: 20;
 }
 .infor {
     position: relative;
     width:100%;
     height: 1000px;
-    border-top: 3px dashed #000;
+    border-top: 2px dashed #000;
 }
 .infor:nth-child(2) {
     border-top: none;
@@ -198,7 +198,7 @@ header li:hover {
     top:50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 3px dashed #000;
+    border: 2px dashed #000;
     border-top: none;
     border-bottom: none;
     background: url(../img/ocean.jpg);
@@ -256,7 +256,7 @@ header li:hover {
     transform: translateY(-50%);
     margin-left: 50px;
     padding-left: 30px;
-    border: 3px dashed #000;
+    border: 2px dashed #000;
     border-radius: 50px;
 }
 .albom_text span {
@@ -278,7 +278,7 @@ header li:hover {
     position: absolute;
     right:0;
     transform: translateY(-50%);
-    border: 3px dashed #000;
+    border: 2px dashed #000;
     transition: all 0.3s;
 }
 .play .cd_area {
@@ -342,7 +342,7 @@ header li:hover {
 #letter{
     position: relative;
     width: 100%;
-    border-top: 3px dashed #000;
+    border-top: 2px dashed #000;
     z-index: 20;
 }
 #letter_area {
@@ -374,9 +374,10 @@ header li:hover {
     font-size: 20px;
     color: #000;
     font-family: "Maplestory_light";
-    border: 3px dashed #000;
     background: url(../img/ocean.jpg);
     background-size: cover;
+    border: 0.5px dashed black;
+    overflow: hidden;
 }
 #letter_text p:nth-child(4) textarea{
     min-height: 400px;
@@ -390,9 +391,9 @@ header li:hover {
     transform: translateX(-50%);
     font-size: 20px;
     font-family: "Maplestory_light";
-    border: 3px dashed #000;
     background: url(../img/ocean.jpg);
     background-size: cover;
+    border: 0.5px dashed black;
 }
 
 /*footer*/
@@ -403,7 +404,7 @@ footer {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    border: 3px dashed #000;
+    border: 2px dashed #000;
     border-bottom: none;
     border-radius: 50px 50px 0px 0px;
     text-align: center;

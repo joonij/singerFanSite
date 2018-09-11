@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <title>Singer</title>
-    <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
@@ -15,267 +14,198 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <h1>
+    <header class="header">
+        <nav class="nav">
+            <h1 class="h1">
                 <img src="img/logo.png" alt="logo">
             </h1>
-            <ul>
-                <li>
-                    <a id="nav_home" href="#">HOME</a>
-                </li>
-                <li>
-                    <a id="nav_about" href="#">ABOUT</a>
-                </li>
-                <li>
-                    <a id="nav_albom" href="#">ALBOM</a>
-                </li>
-                <li>
-                    <a id="nav_letter" href="#">LETTER</a>
-                </li>
+            <ul class="ul">
+                <li class="li home_li">HOME</li>
+                <li class="li albom_li">ALBOM</li>
+                <li class="li letter_li">LETTER</li>
             </ul>
         </nav>
     </header>
-    <div id="container">
-        <div id="home">
-            <div id="home_text">
-                <p>
-                    <span>my youth is yours,</span>
-                    <span>tripping on skies sipping waterfalls</span>
-                    <span>run away now and forevermore</span>
-                    <span>-YOUTH 가사 중-</span>
-                </p>
+    <section class="section">
+        <article class="main">
+            <video class="main_video" src="img/videoplayback.mp4" autoplay loop muted></video>
+            <p class="main_text">
+                <span>my youth is yours,</span>
+                <span>tripping on skies sipping waterfalls</span>
+                <span>run away now and forevermore</span>
+                <span>-YOUTH 가사 중-</span>
+            </p>
+        </article>
+        <article class="albom">
+            <div class="play_btn">
+                <button class="start_btn" type="button"></button>
+                <button class="stop_btn" type="button"></button>
             </div>
-            <div id="home_video">
-                <video src="img/videoplayback.mp4" autoplay loop muted></video>
-            </div>
-        </div>
-        <div id="about">
-            <div class="infor">
-                <div class="img_area">
-                    <div class="shadow"></div>
-                </div>
-                <div class="about_text">
-                    <p>
-                        <span>배우이자 가수, 유명 유튜버인 트로이시반은</span>
-                        <span>남아프리카 공화국, 요하네스 버그에서 태어났다.</span>
-                        <span>남아프리카 공화국에서 증가하는 범죄로</span>
-                        <span>2세에 호주로 이사했다.</span>
-                        <spsna>현재 호주 서부의 퍼스에 살고 있다.</spsna>
-                    </p>
-                    <p>
-                        <span>찰스 디킨즈의 소설 올리버 트위스트 원작으로</span>
-                        <span>한 뮤지컬 [Oliver!] 에서 주연,</span>
-                        <span>엑스맨 탄생 : 울버린, spud, spud2 에서 주연을 맡았다.</span>
-                    </p>
-                </div>
-            </div>
-            <div class="infor">
-                <div class="about_text">
-                    <p>
-                        <span>데뷔 2008년 2월 EP[Dare to Dream] 공식 활동을 시작</span>
-                        <span>본격적인 음반 활동 시작 (EP[TRXYE], EP[WILD])</span>
-                        <span>트로이는 독특하고 신선한 목소리로 다가오게 된다.</span>
-                        <span>탁월하고 설득력 있는 싱어송라이터로 떠오르며,</span>
-                        <span>국내에서 정식 앨범하기도 전 이미 입소문으로 팬층을 구축해</span>
-                        <span>빌보드 앨범 차트 5위라는 신인으로서는 놀라운 성적을 이루게 된다.</span>
-                    </p>
-                    <p>
-                        <span>이어서 트로이 시반은 리드싱글 'WILD'를 포함한</span>
-                        <span>6곡이 수록되어 있는 EP[WILD]를 발표합니다.</span>
-                        <span>그의 음색을 살리기 위해 감각적으로 덧입혀진</span>
-                        <span>일렉트로니카 사운드의 형태로 자리잡아</span>
-                        <span>지금의 트로이 시반의 음악적 정체성으로 자리잡습니다.</span>
-                    </p>
-                </div>
-                <div class="img_area">
-                    <div class="shadow"></div>
-                </div>
-            </div>
-        </div>
-        <div id="albom" class="off">
-            <div id="albom_area">
-                <div id="btn">
-                    <div id="start_btn">
-                        <img id="play_btn" src="img/play.png" alt="play">
-                        <img id="stop_btn" src="img/stop.png" alt="stop">
+            <div class="cd_list">
+                <div id="cd_1">
+                    <div id="cd_1_text" class="albom_text">
+                        <p>
+                            <span>Happy Little Pill</span>
+                            <span>첫 싱글인 감성적인 다크 신스팝</span>
+                            <span>'Happy Little Pill'에서는</span>
+                            <span>그의 음악적 지향점이</span>
+                            <span>명확하게 드러나는 곡입니다.</span>
+                            <span>이 곡을 발표할 당시 트로이는</span>
+                            <span>열아홉살 이였습니다.</span>
+                            <span>'Happy little Pill'은</span>
+                            <span>이미 21개국 1위를 차지 하였고</span>
+                            <span>유투브의 공식 오디오 영상은</span>
+                            <span>3일만에 1백만 조회수를 돌파,</span>
+                            <span>그가 들려주는 성숙하고도</span>
+                            <span>섬세한 감성표현과 아름다운 멜로디입니다.</span>
+                        </p>
                     </div>
-                    <div id="list_button">
-                        <div id="next_btn"></div>
-                        <div id="prev_btn"></div>
-                    </div>
-                </div>
-                <div id="cd_list">
-                    <div id="cd_1">
-                        <div id="cd_1_text" class="albom_text">
-                            <p>
-                                <span>Happy Little Pill</span>
-                                <span>첫 싱글인 감성적인 다크 신스팝</span>
-                                <span>'Happy Little Pill'에서는</span>
-                                <span>그의 음악적 지향점이</span>
-                                <span>명확하게 드러나는 곡입니다.</span>
-                                <span>이 곡을 발표할 당시 트로이는</span>
-                                <span>열아홉살 이였습니다.</span>
-                                <span>'Happy little Pill'은</span>
-                                <span>이미 21개국 1위를 차지 하였고</span>
-                                <span>유투브의 공식 오디오 영상은</span>
-                                <span>3일만에 1백만 조회수를 돌파,</span>
-                                <span>그가 들려주는 성숙하고도</span>
-                                <span>섬세한 감성표현과 아름다운 멜로디입니다.</span>
-                            </p>
-                        </div>
-                        <div class="cd_area">
-                            <div class="cd_img"></div>
-                        </div>
+                    <div class="cd_area">
                         <audio id="cd_1_music" src="audio/Troye Sivan - Happy Little Pill.mp3"></audio>
                     </div>
-                    <div id="cd_2">
-                        <div id="cd_2_text" class="albom_text">
-                            <p>
-                                <span>for him.</span>
-                                <span>거의 러브레터 수준인</span>
-                                <span>예쁜가사로 써내려간</span>
-                                <span>업템포 스타일의 곡 'for him.'</span>
-                                <span>열다섯 살때 릴리알렌의</span>
-                                <span>'Chinese'린 곡을 듣고</span>
-                                <span>영감을 받아, 가사내용이 좋아서</span>
-                                <span>본인도 누군가에게 선물하고 싶은 곡을</span>
-                                <span>쓰고 싶었다고 했다.</span>
-                            </p>
-                        </div>
-                        <div class="cd_area">
-                            <div class="cd_img"></div>
-                            <audio id="cd_2_music" src="audio/Troye Sivan - for him..mp3"></audio>
-                        </div>
+                </div>
+                <div id="cd_2">
+                    <div id="cd_2_text" class="albom_text">
+                        <p>
+                            <span>for him.</span>
+                            <span>거의 러브레터 수준인</span>
+                            <span>예쁜가사로 써내려간</span>
+                            <span>업템포 스타일의 곡 'for him.'</span>
+                            <span>열다섯 살때 릴리알렌의</span>
+                            <span>'Chinese'린 곡을 듣고</span>
+                            <span>영감을 받아, 가사내용이 좋아서</span>
+                            <span>본인도 누군가에게 선물하고 싶은 곡을</span>
+                            <span>쓰고 싶었다고 했다.</span>
+                        </p>
                     </div>
-                    <div id="cd_3">
-                        <div id="cd_3_text" class="albom_text">
-                            <p>
-                                <span>Youth</span>
-                                <span>노래만큼이나 컬러 풀한 색감이 인상적인</span>
-                                <span>Youth는 감각적인 퓨처 R&B 를</span>
-                                <span>느낄수 있는 트로이 시반의</span>
-                                <span>대표곡 중 하나입니다.</span>
-                                <span>화려한 사운드와 신비감이 더해져,</span>
-                                <span>환상의 세계로 들어갈 것 같은</span>
-                                <span>느낌이 듭니다.</span>
-                                <br>
-                                <span>‘My youth is yours’</span>
-                                <span>(내 젊은은 네거야)</span>
-                                <br>
-                                <span>현실의 문제들을 뒤로하고</span>
-                                <span>상대방에게만 몰두할 수 있는</span>
-                                <span>젊은 날의 순수한 사랑에 대해 이야기 하며,</span>
-                                <span>트로이 시반의 미성과 함께 로맨틱한</span>
-                                <span>분위기가 동시에 느껴집니다.</span>
-                            </p>
-                        </div>
-                        <div class="cd_area">
-                            <div class="cd_img"></div>
-                            <audio id="cd_3_music" src="audio/Troye Sivan - YOUTH.mp3"></audio>
-                        </div>
+                    <div class="cd_area">
+                        <audio id="cd_2_music" src="audio/Troye Sivan - for him..mp3"></audio>
                     </div>
-                    <div id="cd_4">
-                        <div id="cd_4_text" class="albom_text">
-                            <p>
-                                <span>FOOLS</span>
-                                <span>이곡을 생애 최악의 곡이라고 밝혔는데요.</span>
-                                <span>엄청 우울한 상태에서 쓴곡이고,</span>
-                                <span>단 30분만에 완성한 곡이라고 합니다.</span>
-                                <span>동성애자로서 사람들에게 받아온</span>
-                                <span>곱지않은 시선과 내면의</span>
-                                <span>혼란스러움이 느껴지는 곡입니다.</span>
-                                <br>
-                                <span>Only fools fall for you,</span>
-                                <span>only fools</span>
-                                <span>(오직 바보들만이 널 사랑해)</span>
-                                <span>Only fools do what i do,</span>
-                                <span>only fools fall</span>
-                                <span>(오직 바보들만이 내가 하는 짓을 해,</span>
-                                <span>오직 바보들만이 사랑해.)</span>
-                                <br>
-                                <span>닿을수 없는 사랑을 자조적인 입장에서</span>
-                                <span>쓴 가사가 인상적입니다.</span>
-                            </p>
-                        </div>
-                        <div class="cd_area">
-                            <div class="cd_img"></div>
-                            <audio id="cd_4_music" src="audio/Troye Sivan - Fools.mp3"></audio>
-                        </div>
+                </div>
+                <div id="cd_3">
+                    <div id="cd_3_text" class="albom_text">
+                        <p>
+                            <span>Youth</span>
+                            <span>노래만큼이나 컬러 풀한 색감이 인상적인</span>
+                            <span>Youth는 감각적인 퓨처 R&#38;B 를</span>
+                            <span>느낄수 있는 트로이 시반의</span>
+                            <span>대표곡 중 하나입니다.</span>
+                            <span>화려한 사운드와 신비감이 더해져,</span>
+                            <span>환상의 세계로 들어갈 것 같은</span>
+                            <span>느낌이 듭니다.</span>
+                            <br>
+                            <span>‘My youth is yours’</span>
+                            <span>(내 젊은은 네거야)</span>
+                            <br>
+                            <span>현실의 문제들을 뒤로하고</span>
+                            <span>상대방에게만 몰두할 수 있는</span>
+                            <span>젊은 날의 순수한 사랑에 대해 이야기 하며,</span>
+                            <span>트로이 시반의 미성과 함께 로맨틱한</span>
+                            <span>분위기가 동시에 느껴집니다.</span>
+                        </p>
                     </div>
-                    <div id="cd_5">
-                        <div id="cd_5_text" class="albom_text">
-                            <p>
-                                <span>WILD</span>
-                                <span>성숙하고 섬세한 감성표현과 </span>
-                                <span>아름다운 멜로디가 매력적인 곡입니다. </span>
-                                <span>트로이 시반이 시드니에 있을 때 쓴 곡으로, </span>
-                                <span>누군가를 처음 만났을 때의 </span>
-                                <span>두근 거리는 마음이 드러납니다.</span>
-                                <span>몽환적인 비트위에 </span>
-                                <span>트로이 시반의 매력적인 목소리가 더해져 </span>
-                                <span>흡인력을 더하는 곡입니다.</span>
-                                <span>뮤직비디오에서는 사랑의 순수함과 </span>
-                                <span>자연스러움을 이야기하며 </span>
-                                <br>
-                                <span>'You driving me wild, wild, wild..'</span>
-                                <span>(넌 날 통제불능으로 만들어.)</span>
-                                <br>
-                                <span>라는 가사로 순수하고 어리기 때문에 </span>
-                                <span>서로에 대한 호기심과</span>
-                                <span>서툰 거친 느낌이 들기도합니다.</span>
-                            </p>
-                        </div>
-                        <div class="cd_area">
-                            <div class="cd_img"></div>
-                            <audio id="cd_5_music" src="audio/Troye Sivan - WILD.mp3"></audio>
-                        </div>
+                    <div class="cd_area">
+                        <audio id="cd_3_music" src="audio/Troye Sivan - YOUTH.mp3"></audio>
+                    </div>
+                </div>
+                <div id="cd_4">
+                    <div id="cd_4_text" class="albom_text">
+                        <p>
+                            <span>FOOLS</span>
+                            <span>이곡을 생애 최악의 곡이라고 밝혔는데요.</span>
+                            <span>엄청 우울한 상태에서 쓴곡이고,</span>
+                            <span>단 30분만에 완성한 곡이라고 합니다.</span>
+                            <span>동성애자로서 사람들에게 받아온</span>
+                            <span>곱지않은 시선과 내면의</span>
+                            <span>혼란스러움이 느껴지는 곡입니다.</span>
+                            <br>
+                            <span>Only fools fall for you,</span>
+                            <span>only fools</span>
+                            <span>(오직 바보들만이 널 사랑해)</span>
+                            <span>Only fools do what i do,</span>
+                            <span>only fools fall</span>
+                            <span>(오직 바보들만이 내가 하는 짓을 해,</span>
+                            <span>오직 바보들만이 사랑해.)</span>
+                            <br>
+                            <span>닿을수 없는 사랑을 자조적인 입장에서</span>
+                            <span>쓴 가사가 인상적입니다.</span>
+                        </p>
+                    </div>
+                    <div class="cd_area">
+                        <audio id="cd_4_music" src="audio/Troye Sivan - Fools.mp3"></audio>
+                    </div>
+                </div>
+                <div id="cd_5">
+                    <div id="cd_5_text" class="albom_text">
+                        <p>
+                            <span>WILD</span>
+                            <span>성숙하고 섬세한 감성표현과 </span>
+                            <span>아름다운 멜로디가 매력적인 곡입니다. </span>
+                            <span>트로이 시반이 시드니에 있을 때 쓴 곡으로, </span>
+                            <span>누군가를 처음 만났을 때의 </span>
+                            <span>두근 거리는 마음이 드러납니다.</span>
+                            <span>몽환적인 비트위에 </span>
+                            <span>트로이 시반의 매력적인 목소리가 더해져 </span>
+                            <span>흡인력을 더하는 곡입니다.</span>
+                            <span>뮤직비디오에서는 사랑의 순수함과 </span>
+                            <span>자연스러움을 이야기하며 </span>
+                            <br>
+                            <span>'You driving me wild, wild, wild..'</span>
+                            <span>(넌 날 통제불능으로 만들어.)</span>
+                            <br>
+                            <span>라는 가사로 순수하고 어리기 때문에 </span>
+                            <span>서로에 대한 호기심과</span>
+                            <span>서툰 거친 느낌이 들기도합니다.</span>
+                        </p>
+                    </div>
+                    <div class="cd_area">
+                        <audio id="cd_5_music" src="audio/Troye Sivan - WILD.mp3"></audio>
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="letter">
-            <div id="letter_area">
+            <div class="wave_area">
+                <div class="waves wave_1"></div>
+                <div class="waves wave_2"></div>
+                <div class="waves wave_3"></div>
+                <div class="waves wave_4"></div>
+                <div class="waves wave_5"></div>
+            </div>
+        </article>
+        <article class="letter">
+            <div class="letter_area">
                 <img src="img/letter_img.png" alt="letter">
-                <div id="letter_text">
-                    <p>
+                <div class="letter_text">
+                    <form action="#" method="POST">
                         <textarea name="name" cols="1" rows="1" wrap="soft" placeholder="이름"></textarea>
-                    </p>
-                    <p>
                         <textarea name="email" cols="1" rows="1" wrap="soft" placeholder="E-Mail"></textarea>
-                    </p>
-                    <p>
                         <textarea name="title" cols="1" rows="1" wrap="soft" placeholder="제목"></textarea>
-                    </p>
-                    <p>
                         <textarea name="content" cols="1" rows="1" wrap="hard" placeholder="내용"></textarea>
-                    </p>
-                    <input type="button" value="전송">
+                        <button type="submit">전송</button>
+                    </form>
                 </div>
             </div>
-        </div>
-    </div>
+        </article>
+    </section>
     <footer>
-        <img src="img/logo.png" alt="logo">
-        <ul id="sns_area">
+        <ul class="sns_area">
             <li class="sns">
                 <a href="https://www.youtube.com/user/TroyeSivan18" target="_blank">
-                    <img src="img/youtube_off.png" alt="youtube">
+                    <img src="img/youtube_off.png" alt="youtube link">
                 </a>
             </li>
             <li class="sns">
                 <a href="https://www.facebook.com/universalmusickorea/posts/910306612362626" target="_blank">
-                    <img src="img/Facebook_off.png" alt="Facebook">
+                    <img src="img/Facebook_off.png" alt="Facebook link">
                 </a>
             </li>
             <li class="sns">
                 <a href="https://www.instagram.com/explore/tags/%ED%8A%B8%EB%A1%9C%EC%9D%B4%EC%8B%9C%EB%B0%98/?hl=ko" target="_blank">
-                    <img src="img/instagram_off.png" alt="instagram">
+                    <img src="img/instagram_off.png" alt="instagram link">
                 </a>
             </li>
             <li class="sns">
                 <a href="https://twitter.com/search?q=%23%ED%8A%B8%EB%A1%9C%EC%9D%B4%EC%8B%9C%EB%B0%98" target="_blank">
-                    <img src="img/twitter_off.png" alt="twitter">
+                    <img src="img/twitter_off.png" alt="twitter link">
                 </a>
             </li>
         </ul>

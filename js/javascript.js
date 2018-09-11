@@ -1,132 +1,129 @@
 $(document).ready(function(){
     
-//    nav button
-    $("#nav_home").click(Event, function(){
-        $("html, body").animate({scrollTop : 0}, 3000);
-    });
-    $("#nav_about").click(Event, function(){
-        $("html, body").animate({scrollTop : 2006}, 3000);
-    });
-    $("#nav_albom").click(Event, function(){
-        $("html, body").animate({scrollTop : 4012}, 3000);
-    });
-    $("#nav_letter").click(Event, function(){
-        $("html, body").animate({scrollTop : 5012}, 3000);
-    });
+    //    nav
     
-    
-//    fixed display
-    $(window).on("scroll", function(){
-        if ($(window).scrollTop() < 2006) {
-            $("#albom").addClass("off");
-            $("#home_text").removeClass("off");
-        } else if ($(window).scrollTop() > 2006) {
-            $("#home_text").addClass("off");
-            $("#albom").removeClass("off");
+    $(window).scroll(function(){
+        var scroll = $(document).scrollTop();
+        if(scroll < 1000){
+            $(".albom_li").css("opacity", "0");
+            $(".letter_li").css("opacity", "0");
+            $(".home_li").css("opacity", "1");
+        } else if(scroll < 1790) {
+            $(".home_li").css("opacity", "0");
+            $(".letter_li").css("opacity", "0");
+            $(".albom_li").css("opacity", "1");
+        } else if(scroll >= 1790) {
+            $(".home_li").css("opacity", "0");
+            $(".albom_li").css("opacity", "0");
+            $(".letter_li").css("opacity", "1");
         }
     });
-    
     
     //    music play
     var music;
     function audio_list() {
-        if ($("#cd_list > div").eq(0).hasClass("play")){
-            music = document.getElementById("cd_1_music"); 
-        } else if ($("#cd_list > div").eq(1).hasClass("play")) {
-            music = document.getElementById("cd_2_music"); 
-        } else if ($("#cd_list > div").eq(2).hasClass("play")) {
-            music = document.getElementById("cd_3_music"); 
-        } else if ($("#cd_list > div").eq(3).hasClass("play")) {
-            music = document.getElementById("cd_4_music"); 
-        } else if ($("#cd_list > div").eq(4).hasClass("play")) {
-            music = document.getElementById("cd_5_music"); 
+        for(i = 0; i < 5; i++){
+            if ($(".cd_list > div").eq(i).hasClass("play")){
+                var a = i+1;
+                music = document.getElementById("cd_"+a+"_music");
+            }
         }
     }
     
-    
-    $("#stop_btn").css("display","none");
-    $("#play_btn").click(Event, function(){
+    function music_start() {
         audio_list()
-        $(this).css("display","none");
-        $("#stop_btn").css("display","block");
-        $(".play .cd_img").addClass("turn");
+        $(".start_btn").css("display","none");
+        $(".stop_btn").css("display","block");
+        $(".waves").addClass("music_play");
+        $(".waves").stop().animate({left : "-20%"}, 1000);
         music.play();
-        $("#stop_btn").click(Event, function(){
+        $(".stop_btn").click(Event, function(){
             $(this).css("display","none");
-            $("#play_btn").css("display","block");
-            $(".play .cd_img").removeClass("turn");
+            $(".start_btn").css("display","block");
+            $(".waves").removeClass("music_play");
+            $(".waves").stop().animate({left : "0"}, 500);
             music.pause();
         });
+    };
+
+    $(".stop_btn").css("display","none");
+    $(".start_btn").click(Event, function(){
+        music_start();
     });
-    
     
 //    albom img change
-    $("#cd_list > div").eq(0).addClass("play");
-    $("#cd_list > div").eq(1).addClass("next");
-    $("#cd_list > div").eq(4).addClass("prev");
-    
-    $("#next_btn").click(Event, function(){
-        $("#stop_btn").css("display","none");
-        $("#play_btn").css("display","block");
-        $(".play .cd_img").removeClass("turn");
-        audio_list();
-        
-        var tempSelector;
-        $("#cd_list > div").each(function(){
-            $(this).hasClass("play") ? tempSelector = $(this): "";
-        });
-        
-        tempSelector.prev().length > 0 ? tempSelector.prev().removeClass("prev") : $("#cd_list > div").eq(4).removeClass("prev");
-        tempSelector.attr("class", "prev");
-        tempSelector.next().attr("class","play");
-        
-        if(tempSelector.next().next().length > 0){
-            tempSelector.next().next().attr("class","next");
-        } else if(tempSelector.next().length > 0){
-            $("#cd_list > div").eq(0).attr("class","next");
-        } else {
-            $("#cd_list > div").eq(0).attr("class","play");
-            $("#cd_list > div").eq(1).attr("class","next");
+    $(".cd_list > div").eq(0).addClass("play");
+    $(".cd_list > div").eq(1).addClass("next");
+    $(".cd_list > div").eq(4).addClass("prev");
+
+    $(".cd_area").click(Event, function(){
+        if($(this).parent().hasClass("play")){
+            if($(".waves").hasClass("music_play") == false){
+                music_start();
+            } else {
+                $(".stop_btn").css("display","none");
+                $(".start_btn").css("display","block");
+                $(".waves").removeClass("music_play");
+                $(".waves").animate({left : "0"}, 500);
+                music.pause();
+            }
         }
-        music.pause();
-        return false;
-    });
-    $("#prev_btn").click(Event, function(){
-        $("#stop_btn").css("display","none");
-        $("#play_btn").css("display","block");
-        $(".play .cd_img").removeClass("turn");
-        audio_list();
-        
-        var tempSelector;
-        $("#cd_list > div").each(function(){
-            $(this).hasClass("play") ? tempSelector = $(this): "";
-        });
-        
-        tempSelector.next().length > 0 ? tempSelector.next().removeClass("next") : $("#cd_list > div").eq(0).removeClass("next");
-        tempSelector.attr("class", "next");
-        tempSelector.prev().attr("class", "play");
-        
-        if(tempSelector.prev().prev().length > 0){
-            tempSelector.prev().prev().attr("class", "prev")
-        } else if (tempSelector.prev().length > 0 ){
-            $("#cd_list > div").eq(4).attr("class", "prev")
-        } else {
-            $("#cd_list > div").eq(4).attr("class", "play")
-            $("#cd_list > div").eq(3).attr("class", "prev")
+        else if($(this).parent().hasClass("next")){
+            $(".stop_btn").css("display","none");
+            $(".start_btn").css("display","block");
+            $(".waves").removeClass("music_play");
+            $(".waves").stop().animate({left : "0"}, 500);
+            audio_list();
+            
+            var tempSelector;
+            $(".cd_list > div").each(function(){
+                $(this).hasClass("play") ? tempSelector = $(this): "";
+            });
+
+            tempSelector.prev().length > 0 ? tempSelector.prev().removeClass("prev") : $(".cd_list > div").eq(4).removeClass("prev");
+            tempSelector.attr("class", "prev");
+            tempSelector.next().attr("class","play");
+            
+            if(tempSelector.next().next().length > 0){
+                tempSelector.next().next().attr("class","next");
+            } else if(tempSelector.next().length > 0){
+                $(".cd_list > div").eq(0).attr("class", "next")
+            } else {
+                $(".cd_list > div").eq(0).attr("class","play");
+                $(".cd_list > div").eq(1).attr("class","next");
+            }
+            
+            music.pause();
+            return false;
+        } else if ($(this).parent().hasClass("prev")) {
+            $(".stop_btn").css("display","none");
+            $(".start_btn").css("display","block");
+            $(".waves").removeClass("music_play");
+            $(".waves").stop().animate({left : "0"}, 500);
+            audio_list();
+            
+            var tempSelector;
+            $(".cd_list > div").each(function(){
+                $(this).hasClass("play") ? tempSelector = $(this): "";
+            });
+            
+            tempSelector.next().length > 0 ? tempSelector.next().removeClass("next") : $(".cd_list > div").eq(0).removeClass("next");
+            tempSelector.attr("class", "next");
+            tempSelector.prev().attr("class", "play");
+            
+            if(tempSelector.prev().prev().length > 0){
+                tempSelector.prev().prev().attr("class", "prev")
+            } else if (tempSelector.prev().length > 0 ){
+                $(".cd_list > div").eq(4).attr("class", "prev")
+            } else {
+                $(".cd_list > div").eq(4).attr("class", "play")
+                $(".cd_list > div").eq(3).attr("class", "prev")
+            }
+            music.pause();
+            return false;
         }
-        music.pause();
-        return false;
     });
     
-    
-//    letter btn
-    $("#letter input").click(function(){
-        var result = confirm("전송하시겠습니까?");
-        if(result) { //yes 
-            location.reload();
-        } else { //no
-        }
-    });
     
     
 //    sns img

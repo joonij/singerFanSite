@@ -1,260 +1,140 @@
+/*RESET CSS*/
+html, body, h1, ul, p, button{padding:0px; margin:0px;}
+ul,ol {list-style:none;}
+a {text-decoration:none;}
+button {border: none; outline: none;}
+img,fieldset,iframe {border:0;}
+img,fieldset,section { border:none;}
+
 /*font*/
 @font-face{font-family:"Brush"; src:url("../fonts/Dry Brush.ttf")}
 @font-face{font-family:"Maplestory_Light"; src:url("../fonts/Maplestory-Light.woff")}
 
-
-/* opacity */
-.off {
-    opacity: 0;
-}
+/* default */
+html, body {width: 100%; height: 100%;}
 
 /*header*/
-header {
+.header {
     position: fixed;
-    width: 1000px;
-    height: 75px;
+    width: 80%;
+    height: 50px;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    border: 2px dashed #000;
-    border-top: none;
-    border-radius: 0px 0px 50px 50px;
-    text-align: center;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
     background: rgba(0,0,0,0);
     z-index: 100;
 }
-header nav {
-    position: relative;
-    width: 100%;
-    height: 100%;
+.header .nav {
+    height: 40px;
+    padding: 5px;
+}
+.header .h1 {
     float: left;
 }
-header h1 {
-    display: inline-block;
-    width: 30%;
-    height: 100%;
-    padding-top: 15px;
+.header .h1 img {
+    height: 40px;
 }
-header h1 img {
-    width: auto;
-    height: 50px;
+.header .ul {
+    overflow: hidden;
 }
-header ul {
-    display: inline-block;
-    width: 70%;
-    height: 100%;
-    float: right;
-}
-header li {
-    width: 25%;
-    height: 100%;
+.header .li {
     float: left;
-    padding-top: 20px;
-    transition:all 1s;
-}
-header li a {
+    margin-left: 5%;
+    transition: all 1s;
     font-size: 20px;
     font-family: "Brush";
     color: #fff;
+    opacity: 0;
 }
-header li:hover {
-    transform: scale(1.3);
+.header .li:first-child {
+    margin-left: 15%;
 }
 
-/*container*/
-#container {
+/*section*/
+.section {
     width: 100%;
-    height: auto;
 }
-
 
 /*home*/
-#home {
-    position:relative;
+.main {
     width: 100%;
-    background: url(../img/ocean.jpg);
-    background-size: cover;
+    height: 1200px;
+    overflow: hidden;
 }
-#home_text {
-    width: 100%;
-    height: 1000px;
-    border-top: 2px dashed #000;
-    z-index: 10;
+.main_video {
+    height: 100%;
 }
-#home_text p {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    padding: 20px;
-    transform: translate(-50%, -50%);
+.main_text {
+    position: absolute;
+    width: 600px;
+    bottom: 20%;
+    right: 5%;
 }
-#home_text span {
+.main_text span {
     display: block;
-    font-size: 40px;
-    font-family: "Maplestory_Light"
+    color: #fff;
+    font-size: 30px;
+    font-family: "Maplestory_Light";
+    -webkit-text-stroke-color: #000;
+    -webkit-text-stroke-width: 0.5px;
 }
-#home_text span:nth-child(2) {
-    padding-left: 60px;
-}
-#home_text span:nth-child(3) {
-    padding-left: 120px;
-}
-#home_text span:nth-child(4) {
+.main_text span:nth-child(4) {
     text-align: right;
     font-family: "Maplestory_light"
 }
-#home_video {
-    position: relative;
-    width: 100%;
-    height: 1000px;
-    border-top: 2px dashed #000;
-    background: url(../img/ocean.jpg);
-    background-size: cover;
-    z-index: 20;
-}
-#home_video video {
-    position: absolute;
-    width: 50%;
-    top: 50%;
-    left: 50%;
-    border-radius: 50px;
-    transform: translate(-50%, -50%);
-}
-
-
-/*about*/
-#about {
-    position: relative;
-    width: 100%;
-    background: url(../img/ocean.jpg) no-repeat;
-    background-size: cover;
-    border-bottom: 2px dashed #000;
-    z-index: 20;
-}
-.infor {
-    position: relative;
-    width:100%;
-    height: 1000px;
-    border-top: 2px dashed #000;
-}
-.infor:nth-child(2) {
-    border-top: none;
-}
-.img_area {
-    position: absolute;
-    width: 50%;
-    height: 1000px;
-    background: url(../img/singer1.png) no-repeat 50% 75%;
-}
-.img_area:nth-child(2) {
-    left:50%;
-    background: url(../img/singer2.png) no-repeat 50% 75%;
-}
-.shadow {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: url(../img/shadow.png) 50%;
-    background-size: cover;
-}
-.about_text {
-    position: absolute;
-    width: 50%;
-    height: 1000px;
-    background: #000;
-}
-.about_text:nth-child(2) {
-    left:50%;
-}
-.about_text p {
-    display: block;
-    color: white;
-    font-size: 30px;
-    padding-left: 100px;
-    font-family: "Maplestory_Light";
-}
-.about_text p:nth-child(1) {
-    padding-top:200px;
-}
-.about_text p:nth-child(2) {
-    padding-top:250px;
-}
-.about_text span{
-    display: block;
-}
-
 
 /*albom*/
-#albom {
+.albom {
     position: relative;
     width:100%;
     height: 1000px;
-    z-index: 10;
-}
-#albom_area {
-    position: fixed;
-    width:1200px;
-    height: 1000px;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 2px dashed #000;
-    border-top: none;
-    border-bottom: none;
     background: url(../img/ocean.jpg);
     background-size: cover;
     overflow: hidden;
 }
-#btn {
-    position: absolute;
-    width: 50%;
-    height:1000px;
-    top:50%;
-    right:0;
-    transform: translateY(-50%);
-    z-index: 3;
-}
-#start_btn {
+.play_btn {
     position: absolute;
     top: 50%;
-    left: 50%;
+    right: 5%;
     transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    z-index: 10;
+}
+.start_btn {
+    width: 50px;
+    height: 50px;
+    background: url(../img/play.png);
+    background-size: cover;
     cursor: pointer;
 }
-#next_btn {
-    position: absolute;
-    width: 200px;
-    height:250px;
-    top:5%;
-    right: 0;
+.stop_btn {
+    width: 50px;
+    height: 50px;
+    background: url(../img/stop.png);
+    background-size: cover;
     cursor: pointer;
 }
-#prev_btn {
-    position: absolute;
-    width: 200px;
-    height:250px;
-    top:65%;
-    right: 0;
-    cursor: pointer;
-}
-#cd_list {
-   position: relative;
-    width:100%;
-    height: 100%; 
-}
-.play {
+.cd_list {
     position: relative;
     width:100%;
-    height: 100%;
+    height: 100%; 
 }
 .albom_text {
     position: relative;
     display: none;
     width: 650px;
     height:650px;
-    top:50%;
+    top: 50%;
+    left: 10%;
     transform: translateY(-50%);
-    margin-left: 50px;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
     padding-left: 30px;
     border: 2px dashed #000;
     border-radius: 50px;
@@ -271,21 +151,31 @@ header li:hover {
     padding-bottom: 30px;
     font-family: "Maplestory_Light";
 }
+.play {
+    position: relative;
+    width:100%;
+    height: 100%;
+}
 .play .albom_text {
     display: block;
 }
 .cd_area {
     position: absolute;
-    right:0;
+    right: 20%;
     transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
     border: 2px dashed #000;
     transition: all 0.3s;
+    cursor: pointer;
 }
 .play .cd_area {
     width: 600px;
     height:600px;
     top:50%;
     border-radius: 600px;
+    overflow: hidden;
     z-index: 2;
 }
 .next .cd_area {
@@ -293,6 +183,7 @@ header li:hover {
     height:200px;
     top:20%;
     border-radius: 200px;
+    overflow: hidden;
     z-index: 1;
 }
 .prev .cd_area {
@@ -300,77 +191,124 @@ header li:hover {
     height:200px;
     top:80%;
     border-radius: 200px;
+    overflow: hidden;
     z-index: 1;
 }
-.cd_img {
-    width: 100%;
-    height: 100%;
-}
-#cd_1 .cd_img {
+#cd_1 .cd_area {
     background: url(../img/cd_1.png);
     background-size: cover;
 }
-#cd_2 .cd_img {
+#cd_2 .cd_area {
     background: url(../img/cd_2.png);
     background-size: cover;
 }
-#cd_3 .cd_img {
+#cd_3 .cd_area {
     background: url(../img/cd_3.png);
     background-size: cover;
 }
-#cd_4 .cd_img {
+#cd_4 .cd_area {
     background: url(../img/cd_4.png);
     background-size: cover;
 }
-#cd_5 .cd_img {
+#cd_5 .cd_area {
     background: url(../img/cd_5.png);
     background-size: cover;
 }
-.turn {
+.wave_area {
+    position: absolute;
+    width: 1500px;
+    height: 1500px;
+    top: 50%;
+    right: -85%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+.waves {
+    position: absolute;
+    width: 1500px;
+    height: 1500px;
+    border-radius: 500px;
     animation-name: play;
-    animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+}
+.wave_1 {
+    top: -100px;
+    background: linear-gradient( to right, rgb(210, 230, 98, 0.3), rgba(122, 112, 80, 0.3));
+    animation-duration: 8s;
+}
+.wave_2 {
+    top: -50px;
+    background: linear-gradient( to right, rgb(216, 89, 89, 0.4), rgba(72, 52, 18, 0.5));
+    animation-duration: 9.5s;
+}
+.wave_3 {
+    background: linear-gradient( to right, rgb(75, 190, 110, 0.4), rgba(12, 82, 80, 0.3));
+    animation-duration: 11s;
+}
+.wave_4 {
+    top: 50px;
+    background: linear-gradient( to right, rgba(249, 52, 131, 0.4), rgba(172, 182, 80, 0.3));
+    animation-duration: 12.5s;
+}
+.wave_5 {
+    top: 100px;
+    background: linear-gradient( to right, rgba(90, 80, 182, 0.5), rgba(190, 12, 85, 0.3));
+    animation-duration: 14s;
+}
+.wave_1.music_play {
+    animation-duration: 2s;
+}
+.wave_2.music_play {
+    animation-duration: 3.5s;
+}
+.wave_3.music_play {
+    animation-duration: 5s;
+}
+.wave_4.music_play {
+    animation-duration: 6.5s;
+}
+.wave_5.music_play {
+    animation-duration: 8s;
 }
 @keyframes play {
     0% {transform: rotate(0deg);}
     100% {transform: rotate(360deg);}
 }
 
-
 /*letter*/
-#letter{
-    position: relative;
+.letter{
     width: 100%;
-    border-top: 2px dashed #000;
-    z-index: 20;
 }
-#letter_area {
+.letter_area {
     position: relative;
     width:100%;
-    height: 1100px;
+    height: 800px;
     background: #000;
 }
-#letter img {
+.letter_area img {
     position: absolute;
     top:50%;
     left:50%;
     transform: translate(-50%, -50%);
-    z-index: 2;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
 }
-#letter_text {
+.letter_text {
     position: absolute;
+    width: 300px;
     top:50%;
     left:65%;
     transform: translateY(-50%);
-    z-index: 2;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
 }
-#letter_text textarea {
-    position: relative;
-    min-width: 300px;
-    min-height: 25px;
-    max-width: 300px;
-    max-height: 25px;
+.letter_text textarea {
+    width: 300px;
     font-size: 20px;
     color: #000;
     font-family: "Maplestory_light";
@@ -379,16 +317,12 @@ header li:hover {
     border: 0.5px dashed black;
     overflow: hidden;
 }
-#letter_text p:nth-child(4) textarea{
-    min-height: 400px;
-    max-height: 400px;
+.letter_text textarea:nth-child(4) {
+    height: 400px;
 }
-#letter_text input {
-    position: absolute;
-    width: 150px;
+.letter_text button {
+    width: 300px;
     height: 30px;
-    left: 50%;
-    transform: translateX(-50%);
     font-size: 20px;
     font-family: "Maplestory_light";
     background: url(../img/ocean.jpg);
@@ -398,38 +332,57 @@ header li:hover {
 
 /*footer*/
 footer {
-    position: fixed;
-    width: 1000px;
+    width: 100%;
     height: 75px;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    border: 2px dashed #000;
-    border-bottom: none;
-    border-radius: 50px 50px 0px 0px;
-    text-align: center;
-    background: rgba(0,0,0,0);
-    z-index: 100;
-}
-footer img {
-    width: auto;
-    height: 50px;
-    padding-top: 20px;
-}
-#sns_area {
-    position: absolute;
-    width: 300px;
-    height: 100%;
-    bottom: 0;
-    right: 10px;
+    background: #000;
 }
 .sns {
-    position: relative;
-    width: 25%;
-    height: 100%;
-    float: left;
+    float: right;
+    margin-right: 50px;
 }
 .sns img {
     height: 30px;
-    padding-top: 25px;
+}
+@media all and (max-width: 1600px) {
+    .cd_area {
+        right: 10%;
+    }
+}
+@media all and (max-width: 1400px) {
+    .albom_text {
+        left: 0;
+    }
+    .cd_area {
+        right: 0;
+    }
+}
+@media all and (max-width: 1100px) {
+    .albom_text {
+        display: none !important; 
+    }
+    .wave_area {
+        right: -100%;
+    }
+}
+@media all and (max-width: 950px) {
+    .main_text {
+        width: 350px;
+    }
+    .main_text span {
+        font-size: 20px;
+    }
+    .wave_area {
+        right: -150%;
+    }
+    .letter_area img {
+        left:20%;
+    }
+    .letter_text {
+        left:25%;
+    }
+}
+@media all and (max-width: 500px) {
+    .header .li {
+        font-size: 14px;
+    }
 }

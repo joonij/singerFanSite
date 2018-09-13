@@ -9,6 +9,7 @@ img,fieldset,section { border:none;}
 /*font*/
 @font-face{font-family:"Brush"; src:url("../fonts/Dry Brush.ttf")}
 @font-face{font-family:"Maplestory_Light"; src:url("../fonts/Maplestory-Light.woff")}
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300|Noto+Serif+KR');
 
 /* default */
 html, body {width: 100%; height: 100%;}
@@ -45,7 +46,7 @@ html, body {width: 100%; height: 100%;}
     margin-left: 5%;
     transition: all 1s;
     font-size: 20px;
-    font-family: "Brush";
+    font-family: "Brush", sans-serif;;
     color: #fff;
     opacity: 0;
 }
@@ -72,18 +73,16 @@ html, body {width: 100%; height: 100%;}
     width: 600px;
     bottom: 20%;
     right: 5%;
-}
-.main_text span {
-    display: block;
     color: #fff;
     font-size: 30px;
-    font-family: "Maplestory_Light";
+    font-family: "Maplestory_Light", sans-serif;;
     -webkit-text-stroke-color: #000;
     -webkit-text-stroke-width: 0.5px;
 }
-.main_text span:nth-child(4) {
+.main_text span {
+    display: block;
     text-align: right;
-    font-family: "Maplestory_light"
+    font-family: "Maplestory_light", sans-serif;
 }
 
 /*albom*/
@@ -91,8 +90,7 @@ html, body {width: 100%; height: 100%;}
     position: relative;
     width:100%;
     height: 1000px;
-    background: url(../img/ocean.jpg);
-    background-size: cover;
+    background-color: #dadada;
     overflow: hidden;
 }
 .play_btn {
@@ -108,15 +106,19 @@ html, body {width: 100%; height: 100%;}
 .start_btn {
     width: 50px;
     height: 50px;
-    background: url(../img/play.png);
-    background-size: cover;
+    border-style: solid;
+    border-width: 50px 0 50px 90px;
+    border-color: transparent transparent transparent #0aaf00;
+    background-color: transparent;
     cursor: pointer;
 }
 .stop_btn {
-    width: 50px;
-    height: 50px;
-    background: url(../img/stop.png);
-    background-size: cover;
+    width: 100px;
+    height: 100px;
+    border-style: solid;
+    border-width: 0px 40px 0 40px;
+    border-color: transparent #0aaf00 transparent #0aaf00;
+    background-color: transparent;
     cursor: pointer;
 }
 .cd_list {
@@ -136,20 +138,26 @@ html, body {width: 100%; height: 100%;}
     -moz-transform: translateY(-50%);
     -o-transform: translateY(-50%);
     padding-left: 30px;
-    border: 2px dashed #000;
-    border-radius: 50px;
-}
-.albom_text span {
-    display: block;
+    border: 1px solid #ddd;
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px #cfcfcf;
     font-size: 27px;
-    font-family: "Maplestory_Light";
-    letter-spacing: 3px;
+    letter-spacing: -1px;
+    line-height: 29px;
+    font-size: 24px;
+    color: #777;
+    font-weight: 400;
+    font-family: 'Noto Sans KR', sans-serif;
 }
-.albom_text span:nth-child(1) {
-    font-size: 40px;
+.albom_text strong {
+    display: block;
+    font-size: 50px;
     padding-top: 50px;
     padding-bottom: 30px;
-    font-family: "Maplestory_Light";
+    color: #333;
+    font-weight: bold;
+    font-family: 'Noto Serif KR', serif;
 }
 .play {
     position: relative;
@@ -166,7 +174,7 @@ html, body {width: 100%; height: 100%;}
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     -o-transform: translateY(-50%);
-    border: 2px dashed #000;
+    border: 1px solid rgba(255,255,255,0.4);
     transition: all 0.3s;
     cursor: pointer;
 }
@@ -281,6 +289,7 @@ html, body {width: 100%; height: 100%;}
 /*letter*/
 .letter{
     width: 100%;
+    overflow: hidden;
 }
 .letter_area {
     position: relative;
@@ -311,10 +320,11 @@ html, body {width: 100%; height: 100%;}
     width: 300px;
     font-size: 20px;
     color: #000;
-    font-family: "Maplestory_light";
-    background: url(../img/ocean.jpg);
-    background-size: cover;
-    border: 0.5px dashed black;
+    font-family: 'Noto Sans KR', sans-serif;
+    border: 1px solid #ddd;
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 10px;
+    box-sizing: border-box;
     overflow: hidden;
 }
 .letter_text textarea:nth-child(4) {
@@ -323,11 +333,12 @@ html, body {width: 100%; height: 100%;}
 .letter_text button {
     width: 300px;
     height: 30px;
+    margin: 0 auto;
     font-size: 20px;
-    font-family: "Maplestory_light";
-    background: url(../img/ocean.jpg);
-    background-size: cover;
-    border: 0.5px dashed black;
+    font-family: 'Noto Sans KR', sans-serif;
+    border: 1px solid #ddd;
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 10px;
 }
 
 /*footer*/
@@ -367,8 +378,6 @@ footer {
 @media all and (max-width: 950px) {
     .main_text {
         width: 350px;
-    }
-    .main_text span {
         font-size: 20px;
     }
     .wave_area {
@@ -384,5 +393,18 @@ footer {
 @media all and (max-width: 500px) {
     .header .li {
         font-size: 14px;
+    }
+    .main_text {
+        width: 300px;
+        font-size: 14px;
+    }
+    .wave_area {
+        width: 700px;
+    }
+    .letter_text textarea {
+        width: 250px;
+    }
+    .letter_text button {
+        width: 250px;
     }
 }

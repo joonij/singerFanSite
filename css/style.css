@@ -238,47 +238,73 @@ html, body {width: 100%; height: 100%;}
     width: 1500px;
     height: 1500px;
     border-radius: 500px;
+    -webkit-animation-name: play;
+    -moz-animation-name: play;
     animation-name: play;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
     animation-timing-function: linear;
 }
 .wave_1 {
     top: -100px;
-    background: linear-gradient( to right, rgb(210, 230, 98, 0.3), rgba(122, 112, 80, 0.3));
+    background: linear-gradient( to right, rgba(210, 230, 98, 0.3), rgba(122, 112, 80, 0.3));
+    -webkit-animation-duration: 8s;
+    -moz-animation-duration: 8s;
     animation-duration: 8s;
 }
 .wave_2 {
     top: -50px;
-    background: linear-gradient( to right, rgb(216, 89, 89, 0.4), rgba(72, 52, 18, 0.5));
+    background: linear-gradient( to right, rgba(216, 89, 89, 0.4), rgba(72, 52, 18, 0.5));
+    -webkit-animation-duration: 9.5s;
+    -moz-animation-duration: 9.5s;
     animation-duration: 9.5s;
 }
 .wave_3 {
-    background: linear-gradient( to right, rgb(75, 190, 110, 0.4), rgba(12, 82, 80, 0.3));
+    background: linear-gradient( to right, rgba(75, 190, 110, 0.4), rgba(12, 82, 80, 0.3));
+    -webkit-animation-duration: 11s;
+    -moz-animation-duration: 11s;
     animation-duration: 11s;
 }
 .wave_4 {
     top: 50px;
     background: linear-gradient( to right, rgba(249, 52, 131, 0.4), rgba(172, 182, 80, 0.3));
+    -webkit-animation-duration: 12.5s;
+    -moz-animation-duration: 12.5s;
     animation-duration: 12.5s;
 }
 .wave_5 {
     top: 100px;
     background: linear-gradient( to right, rgba(90, 80, 182, 0.5), rgba(190, 12, 85, 0.3));
+    -webkit-animation-duration: 14s;
+    -moz-animation-duration: 14s;
     animation-duration: 14s;
 }
 .wave_1.music_play {
+    -webkit-animation-duration: 2s;
+    -moz-animation-duration: 2s;
     animation-duration: 2s;
 }
 .wave_2.music_play {
+    -webkit-animation-duration: 3.5s;
+    -moz-animation-duration: 3.5s;
     animation-duration: 3.5s;
 }
 .wave_3.music_play {
+    -webkit-animation-duration: 5s;
+    -moz-animation-duration: 5s;
     animation-duration: 5s;
 }
 .wave_4.music_play {
+    -webkit-animation-duration: 6.5s;
+    -moz-animation-duration: 6.5s;
     animation-duration: 6.5s;
 }
 .wave_5.music_play {
+    -webkit-animation-duration: 8s;
+    -moz-animation-duration: 8s;
     animation-duration: 8s;
 }
 @keyframes play {
@@ -316,29 +342,30 @@ html, body {width: 100%; height: 100%;}
     -moz-transform: translateY(-50%);
     -o-transform: translateY(-50%);
 }
-.letter_text textarea {
+.letter_text .text_area {
     width: 300px;
-    font-size: 20px;
+    padding: 5px;
+    font-size: 14px;
     color: #000;
     font-family: 'Noto Sans KR', sans-serif;
     border: 1px solid #ddd;
-    background-color: rgba(255,255,255,0.3);
-    border-radius: 10px;
+    background-color: rgba(255,255,255,0.8);
     box-sizing: border-box;
     overflow: hidden;
 }
-.letter_text textarea:nth-child(4) {
+.letter_text textarea {
     height: 400px;
+    resize: none;
 }
 .letter_text button {
-    width: 300px;
-    height: 30px;
-    margin: 0 auto;
+    width: 100px;
+    padding: 10px 0;
+    float: right;
     font-size: 20px;
     font-family: 'Noto Sans KR', sans-serif;
-    border: 1px solid #ddd;
-    background-color: rgba(255,255,255,0.3);
-    border-radius: 10px;
+    color: #fff;
+    background-color: rgb(255,111,111);
+    border-radius: 5px;
 }
 
 /*footer*/
